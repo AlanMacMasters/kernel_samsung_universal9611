@@ -1,4 +1,3 @@
-
 <h1 align="center">
   <br>
   <img src="https://i.ibb.co/LYYJzJC/logo.jpg" alt="Markdownify" width="2048">
@@ -25,7 +24,7 @@
 * Supports DeX touchpad for corresponding OneUI ports that have DeX ported.
 * Lot of debug codes/configuration Samsung added are removed.
 * Added [wireguard](https://www.wireguard.com/) driver, an open-source VPN driver in-kernel
-* Added [KernelSU](https://kernelsu.org/)
+* Added [KernelSU-Next](https://github.com/rifsxd/KernelSU-Next)
 
 ## How To Build
 
@@ -36,7 +35,7 @@ You will need ubuntu, git, around 8GB RAM and bla-bla-bla...
 $ sudo apt install -y bash git make libssl-dev curl bc pkg-config m4 libtool automake autoconf
 
 # Clone this repository
-$ git clone https://github.com/Gojikovi/kernel_samsung_universal9611
+$ git clone -b Grass-Unified --depth=1 https://github.com/AshutoshCodeSpace/kernel_samsung_universal9611
 
 # Go into the repository
 $ cd kernel_samsung_universal9611
@@ -55,14 +54,12 @@ After build the image of the kernel will be in out/arch/arm64/boot/Image
 
 ## How To Flash
 
-After a successful build, you can see the scripts/packaging/Grass*.zip archive.
-This is your kernel. Just flash it via TWRP or adb sideload
+Once the build is complete, you’ll find the Grass*.zip archive in the cloned kernel repository directory. This file contains the compiled kernel. To flash it, use either TWRP or adb sideload.
 
 ## Credits
 
+- [AshutoshCodeSpace](https://github.com/AshutoshCodeSpace)
 - [roynatech2544](https://github.com/roynatech2544)
 - [Samsung Open Source](https://opensource.samsung.com/)
 - [Android Open Source Project](https://source.android.com/)
 - [The Linux Kernel](https://www.kernel.org/)
-
-
